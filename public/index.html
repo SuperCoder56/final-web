@@ -1,0 +1,83 @@
+<!doctype html>
+<html >
+<head>
+<meta charset=""utff-8">
+<script src="/js/libs/jquery-3.2.1.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+      
+      .footer{
+      	width:100%;
+      	height:100px;
+      }
+      .myStyle{
+      	float:left;
+      	background-color:lightblue;
+      	height:300px;
+      	width:32%;
+      	border:1px solid black;
+
+      }
+    </style>
+
+</head>
+<body >
+   
+ 
+<h1 class="text-center" >Welcome to the weather app</h1><br/><br/>
+<form id="message-form" class="form-group" style="margin-left:33%">
+    <div class="col-xs-4">
+    <input id="searchInput" size="15px"  class="form-control" name="message" type="text" placeholder="Enter city, pincode or place "/>
+    </div>
+    <button class="btn btn-primary"  >Search</button>
+</form>
+<div   id="weather" class="myStyle"  style="margin-left: 18%">
+<p id="location" class="text-center" > Location </p>
+<p  class="text-center" id="dt"></p>
+<h1><span id="temp"> Weather </span> &#8451;</h1>
+<h2 id="main">hi</h2>
+<img id="myImg"  class="img-rounded"  src="http://openweathermap.org/img/w/10d.png" width="107" height="98">
+ <h4  id="weather_description">hi </h4>
+
+</div>
+<div  class="myStyle">
+    <h2>Right Now</h2>
+    <p>Longitude :<span id="coord_lon"></span>
+ Lattitude :<span id="coord_lat"></sapn></p>
+ <p>Pressure :
+  <span id="main_pressure"></span> hPa</p>
+
+   <p>Humidity :<span id="main_humidity"></span>%</p>
+   
+    
+      
+       <p>Wind : <span id="wind_speed"></span>m/s  <span id="wind_deg"></span>deg</p>
+       <p>Clouds : <span   id="clouds">hi </span>%</p>
+</div>
+
+   
+    <div id="now"  style="float:left;background-color:lightblue;height:120px;width:100%;border:1px solid black;margin-left:0%">
+   <div id="sun"  style="float:left;background-color:lightblue;height:120px;width:50%;border:1px solid black;margin-left:0%">
+       <p>Sunrise : <span id="sys_sunrise"></span></p>
+          <p>Sunset : <span id="sys_sunset"></span></p>
+          </div>
+          <div id="todaytemp" style="float:left;background-color:lightblue;height:120px;width:50%;border:1px solid black;margin-left:0%" >
+          <p>Max temprature : <span id="main_temp_max"></span> &#8451;</p>
+   <p>Min temprature : <span id="main_temp_min"></span> &#8451;</p>
+   </div>
+<div class="footer text-center" >
+<br>
+<p>Developer : Jaswinder Singh     &nbsp;<span>Email : jaswinder9905@gmail.com</span></p>
+<p><span><a href="https://www.facebook.com/androidvita">Facebook</a>    </span><span><a href="https://www.youtube.com/channel/UCuQa7WtI02SljLTlyZCBytg">Youtube</a>    </span><span><a href="https://www.linkedin.com/in/jaswinder-singh-710b67139/">LinkdIn</a></span></p>
+</div>
+
+
+   
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
+
+
+
+</body>
+</html>
